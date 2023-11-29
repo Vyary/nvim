@@ -39,6 +39,7 @@ end
 return {
   "nvimtools/none-ls.nvim",
   event = "VeryLazy",
+-- event = { "CursorHold", "CursorHoldI" },
   config = function()
     local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
