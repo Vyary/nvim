@@ -45,8 +45,17 @@ return {
     "nvim-tree/nvim-web-devicons",
     "MunifTanjim/nui.nvim",
   },
-  keys = {},
-  opts = {},
+    keys = {
+    { "<leader>e", "<cmd>Neotree focus reveal<cr>", desc = "Focus File Tree and Reveal File" },
+    { "<leader>o", "<cmd>Neotree toggle<cr>", desc = "File Tree Toggle" },
+  },
+  opts = {
+    window = {
+      mappings = {
+        ["<space>"] = "none",
+      },
+    },
+  },
   config = function(_, opts)
     local function on_move(data)
       on_rename(data.source, data.destination)
