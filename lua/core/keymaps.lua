@@ -47,8 +47,8 @@ map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and Clear Hlsea
 map("n", "<leader>w", "<cmd>:w<cr>", { desc = "Save File" })
 
 -- Switch buffers
-map("n", "<leader>p", "<cmd>:bp<cr>", { desc = "Buffer Previous" })
-map("n", "<leader>n", "<cmd>:bn<cr>", { desc = "Buffer Next" })
+map("n", "<leader>[", "<cmd>:bp<cr>", { desc = "Buffer Previous" })
+map("n", "<leader>]", "<cmd>:bn<cr>", { desc = "Buffer Next" })
 map("n", "<leader>q", "<C-w>q", { desc = "Buffer Quit" })
 
 -- Windows Motions
@@ -58,6 +58,11 @@ map("n", "<leader>v", "<cmd>:vsplit<cr>", { desc = "VSplit" })
 map("n", "<leader>ss", "<cmd>mks! ~/.vim_session<cr>", { desc = "Save Session" })
 map("n", "<leader>sl", "<cmd>source ~/.vim_session<cr>", { desc = "Load Session" })
 
--- Comment/uncomment
+-- Comment/Uncomment
 map('n', '<leader>/', '<cmd>lua require("Comment.api").toggle.linewise.current()<CR>', "Toggle comment")
 map('v', '<leader>/', "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>", "Toggle comment")
+
+-- Select All
+map("n", "<C-a>", "ggVG", { desc = "Save Session" })
+
+map("n", "<leader>o", "<cmd>lua require('neo-tree.events')<cr><cmd>Neotree focus<cr>", { desc = "Save Session" })
