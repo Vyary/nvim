@@ -37,7 +37,9 @@ return {
         end,
       },
       mapping = cmp.mapping.preset.insert({
-        ["<C-j>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
+        ["<C-j>"] = cmp.mapping.select_next_item({
+          behavior = cmp.SelectBehavior.Insert,
+        }),
         ["<C-k>"] = cmp.mapping.select_prev_item({
           behavior = cmp.SelectBehavior.Insert,
         }),
@@ -70,7 +72,7 @@ return {
         { name = "buffer" },   -- text within current buffer
         { name = "path" },     -- file system paths
         { name = "nvim_lsp_signature_help" },
-        { name = "tabnine" },
+        -- { name = "tabnine" },
       }),
     })
   end,

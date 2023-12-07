@@ -23,7 +23,7 @@ return {
         -- "typescript",
         -- "html",
         -- "css",
-        -- "python",
+        "python",
         "lua",
         "go",
         "gitignore",

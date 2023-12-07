@@ -7,7 +7,7 @@ return {
     require("catppuccin").setup({
       flavour = "macchiato",
       integrations = {
-        -- neotree = true,
+        neotree = true,
         cmp = true,
         treesitter = true,
         flash = true,

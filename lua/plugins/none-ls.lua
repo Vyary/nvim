@@ -51,9 +51,13 @@ return {
         -- go
         require("null-ls").builtins.formatting.goimports,
         require("null-ls").builtins.formatting.golines,
-        require("null-ls").builtins.diagnostics.revive,
+        require("null-ls").builtins.diagnostics.staticcheck,
         require("null-ls").builtins.code_actions.gomodifytags,
         require("null-ls").builtins.code_actions.impl,
+        -- python
+        require("null-ls").builtins.formatting.black,
+        require("null-ls").builtins.formatting.isort,
+        require("null-ls").builtins.diagnostics.flake8.with({extra_args = {"--max-line-length","88"}}),
       },
       debug = false,
       on_attach = function(client, bufnr)

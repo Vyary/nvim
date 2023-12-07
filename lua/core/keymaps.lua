@@ -64,5 +64,3 @@ map('v', '<leader>/', "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.
 
 -- Select All
 map("n", "<C-a>", "ggVG", { desc = "Save Session" })
-
-map("n", "<leader>o", "<cmd>lua require('neo-tree.events')<cr><cmd>Neotree focus<cr>", { desc = "Save Session" })
