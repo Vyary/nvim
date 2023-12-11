@@ -40,7 +40,9 @@ function Focus_reveal_neotree()
   local ok, _ = pcall(function()
     require("neo-tree.command").execute({ reveal = true, dir = vim.loop.cwd() })
   end)
-  if not ok then vim.cmd("Neotree focus") end
+  if not ok then
+    vim.cmd("Neotree focus")
+  end
 end
 
 return {
@@ -54,7 +56,11 @@ return {
     "MunifTanjim/nui.nvim",
   },
   keys = {
-    { "<leader>e", "<cmd>lua Focus_reveal_neotree()<cr>", desc = "Focus File Tree and Reveal File" },
+    {
+      "<leader>e",
+      "<cmd>lua Focus_reveal_neotree()<cr>",
+      desc = "Focus File Tree and Reveal File",
+    },
     { "<leader>o", "<cmd>Neotree toggle<cr>", desc = "File Tree Toggle" },
   },
   opts = {
@@ -62,6 +68,12 @@ return {
       width = 35,
       mappings = {
         ["<space>"] = "none",
+      },
+    },
+    filesystem = {
+      filtered_items = {
+        hide_dotfiles = false,
+        hide_gitignored = true,
       },
     },
   },
