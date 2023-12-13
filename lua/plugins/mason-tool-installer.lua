@@ -8,12 +8,15 @@ return {
     require("mason").setup()
     require("mason-tool-installer").setup({
       ensure_installed = {
+        -- lua
         "stylua",
+        -- go
         "goimports",
         "golines",
-        "staticcheck",
+        "golangci_lint",
         "gomodifytags",
         "impl",
+        -- py
         "black",
         "isort",
         "flake8",
