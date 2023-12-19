@@ -58,9 +58,5 @@ map("n", "<leader>v", "<cmd>:vsplit<cr>", { desc = "VSplit" })
 map("n", "<leader>ss", "<cmd>mks! ~/.vim_session<cr>", { desc = "Save Session" })
 map("n", "<leader>sl", "<cmd>source ~/.vim_session<cr>", { desc = "Load Session" })
 
--- Comment/Uncomment
-map('n', '<leader>/', '<cmd>lua require("Comment.api").toggle.linewise.current()<CR>', "Toggle comment")
-map('v', '<leader>/', "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>", "Toggle comment")
-
 -- Select All
 map("n", "<C-a>", "ggVG", { desc = "Save Session" })
