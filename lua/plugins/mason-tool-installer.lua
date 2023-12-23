@@ -13,7 +13,7 @@ return {
         -- go
         "goimports",
         "golines",
-        "golangci_lint",
+        "golangci-lint",
         "gomodifytags",
         "impl",
         -- py

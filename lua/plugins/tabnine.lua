@@ -1,7 +1,7 @@
 -- Get platform dependant build script
 local function tabnine_build_path()
   if vim.loop.os_uname().sysname == "Windows_NT" then
-    return "pwsh -noni .\\install.ps1"
+    return "pwsh.exe -file .\\dl_binaries.ps1"
   else
     return "./dl_binaries.sh"
   end
@@ -10,7 +10,7 @@ end
 return {
   "codota/tabnine-nvim",
   build = tabnine_build_path(),
-  event = { "BufReadPre", "BufNewFile" },
+  -- event = { "BufReadPre", "BufNewFile" },
   lazy = false,
   config = function()
     require("tabnine").setup({
