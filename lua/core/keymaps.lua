@@ -27,7 +27,7 @@ map("i", "<C-j>", "<down>", { desc = "Move Cursor Down" })
 map("i", "<C-k>", "<up>", { desc = "Move Cursor Up" })
 
 -- movement between buffers
-map("n", "<S-tab>", "<C-w>W", { desc = "Previous window" })
+-- map("n", "<S-tab>", "<C-w>W", { desc = "Previous window" })
 map("n", "<tab>", "<C-w>w", { desc = "Next window" })
 
 -- H and L go to begining/end of line
