@@ -63,3 +63,8 @@ opt.list = false
 if vim.fn.has("nvim-0.10") == 1 then
   opt.smoothscroll = true
 end
+
+opt.fillchars = { fold = " " }
+opt.foldmethod = "indent"
+opt.foldenable = false
+opt.foldlevel = 99

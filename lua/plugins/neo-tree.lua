@@ -36,15 +36,6 @@ local function on_rename(from, to)
   vim.cmd("wa")
 end
 
-function Focus_reveal_neotree()
-  local ok, _ = pcall(function()
-    require("neo-tree.command").execute({ reveal = true, dir = vim.loop.cwd() })
-  end)
-  if not ok then
-    vim.cmd("Neotree focus")
-  end
-end
-
 return {
   "nvim-neo-tree/neo-tree.nvim",
   branch = "v3.x",
@@ -57,7 +48,7 @@ return {
   keys = {
     {
       "<leader>e",
-      "<cmd>lua Focus_reveal_neotree()<cr>",
+      "<cmd>Neotree focus<cr>",
       desc = "Focus File Tree and Reveal File",
     },
     { "<leader>o", "<cmd>Neotree toggle<cr>", desc = "File Tree Toggle" },
@@ -73,6 +64,10 @@ return {
       filtered_items = {
         hide_dotfiles = false,
         hide_gitignored = true,
+      },
+      follow_current_file = {
+        enabled = true,
+        leave_dirs_open = true,
       },
     },
   },

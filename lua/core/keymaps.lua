@@ -49,7 +49,7 @@ map("n", "<leader>w", "<cmd>:w<cr>", { desc = "Save File" })
 -- Switch buffers
 map("n", "<leader>[", "<cmd>:bp<cr>", { desc = "Buffer Previous" })
 map("n", "<leader>]", "<cmd>:bn<cr>", { desc = "Buffer Next" })
-map("n", "<leader>q", "<C-w>q", { desc = "Buffer Quit" })
+map("n", "<leader>q", "<cmd>:bd<cr>", { desc = "Buffer Quit" })
 
 -- Windows Motions
 map("n", "<leader>v", "<cmd>:vsplit<cr>", { desc = "VSplit" })
