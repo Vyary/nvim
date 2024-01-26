@@ -6,8 +6,8 @@ return {
   config = function()
     require("catppuccin").setup({
       flavour = "macchiato",
+      -- transparent_background = true,
       integrations = {
-        neotree = true,
         cmp = true,
         treesitter = true,
         flash = true,
