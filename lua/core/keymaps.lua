@@ -60,3 +60,6 @@ map("n", "<leader>sl", "<cmd>source ~/.vim_session<cr>", { desc = "Load Session"
 
 -- Select All
 map("n", "<C-a>", "ggVG", { desc = "Save Session" })
+
+-- Remove help
+map("n", "<F1>", "<Nop>", { desc = "Remove help" })
