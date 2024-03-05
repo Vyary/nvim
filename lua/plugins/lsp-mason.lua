@@ -30,8 +30,9 @@ return {
         "gopls",
         "lua_ls",
         "jedi_language_server",
-        -- "tsserver",
-        -- "angularls",
+        "html",
+        "tsserver",
+        "angularls",
       },
     })
 

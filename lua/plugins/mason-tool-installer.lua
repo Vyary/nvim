@@ -20,8 +20,8 @@ return {
         "black",
         "isort",
         "flake8",
-        -- "prettierd",
-        -- "editorconfig-checker",
+        "prettier",
+        "editorconfig-checker",
       },
     })
   end,

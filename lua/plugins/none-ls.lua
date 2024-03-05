@@ -60,6 +60,8 @@ return {
         require("null-ls").builtins.diagnostics.flake8.with({
           extra_args = { "--max-line-length", "88" },
         }),
+        -- js/20:26:26
+        require("null-ls").builtins.formatting.prettier,
       },
       debug = false,
       on_attach = function(client, bufnr)
