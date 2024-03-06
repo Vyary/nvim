@@ -1,6 +1,6 @@
 return {
   "RRethy/vim-illuminate",
-  event = "InsertEnter",
+  event = { "BufReadPre", "BufNewFile" },
   keys = {
     { "]]", desc = "Next Reference" },
     { "[[", desc = "Prev Reference" },

@@ -1,12 +1,10 @@
 local function get_clients(opts)
-  local ret = {} ---@type lsp.Client[]
+  local ret = {}
   if vim.lsp.get_clients then
     ret = vim.lsp.get_clients(opts)
   else
-    ---@diagnostic disable-next-line: deprecated
     ret = vim.lsp.get_active_clients(opts)
     if opts and opts.method then
-      ---@param client lsp.Client
       ret = vim.tbl_filter(function(client)
         return client.supports_method(opts.method, { bufnr = opts.bufnr })
       end, ret)
@@ -19,7 +17,6 @@ local function on_rename(from, to)
   local clients = get_clients()
   for _, client in ipairs(clients) do
     if client.supports_method("workspace/willRenameFiles") then
-      ---@diagnostic disable-next-line: invisible
       local resp = client.request_sync("workspace/willRenameFiles", {
         files = {
           {
