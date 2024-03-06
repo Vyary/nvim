@@ -19,7 +19,7 @@ return {
         -- py
         "black",
         "isort",
-        "flake8",
+        "pylint",
         "prettier",
         "editorconfig-checker",
       },
