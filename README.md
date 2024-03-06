@@ -12,6 +12,9 @@ sudo apt install npm
 sudo snap install go --classic
 sudo snap install nvim --classic
 
+sudo apt install exa
+echo "alias ls='exa --icons -F'" >> .bashrc
+
 git clone git://github.com/wting/autojump
 cd autojump
 ./install.py
