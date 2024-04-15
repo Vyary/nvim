@@ -38,7 +38,7 @@ map("n", "L", "$", { desc = "Go to End of Line" })
 map("n", "vv", "V", { desc = "Select Whole Line" })
 
 -- Better paste
-map("v", "p", '"_dP', { desc = "Paste Over Selection" })
+map("v", "p", "P", { desc = "Paste Over Selection" })
 
 -- Clear search with <esc>
 map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and Clear Hlsearch" })
@@ -63,3 +63,4 @@ map("n", "<C-a>", "ggVG", { desc = "Save Session" })
 
 -- Remove help
 map("n", "<F1>", "<Nop>", { desc = "Remove help" })
+

@@ -20,12 +20,13 @@ return {
       ensure_installed = {
         "json",
         "javascript",
-        -- "typescript",
+        "typescript",
         "html",
         "css",
         "python",
         "lua",
         "go",
+        "templ",
         "gitignore",
       },
       -- enable nvim-ts-context-commentstring plugin for commenting tsx and jsx

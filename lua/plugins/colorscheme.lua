@@ -10,6 +10,7 @@ return {
       integrations = {
         cmp = true,
         treesitter = true,
+        nvimtree = true,
         flash = true,
         mason = true,
         illuminate = {

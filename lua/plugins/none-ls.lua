@@ -58,7 +58,7 @@ return {
         require("null-ls").builtins.formatting.black,
         require("null-ls").builtins.formatting.isort,
         require("null-ls").builtins.diagnostics.pylint,
-        -- js/20:26:26
+        -- js/ts
         require("null-ls").builtins.formatting.prettier,
       },
       debug = false,
