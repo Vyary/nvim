@@ -38,7 +38,7 @@ return {
           behavior = cmp.SelectBehavior.Insert,
         }),
         ["<CR>"] = cmp.mapping.confirm({ select = true }),
-        ["<Tab>"] = cmp.mapping(function()
+        ["<S-Tab>"] = cmp.mapping(function()
           if luasnip.expand_or_jumpable() then
             luasnip.expand_or_jump()
           end

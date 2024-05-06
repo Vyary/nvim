@@ -44,7 +44,6 @@ return {
     local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
     require("null-ls").setup({
-      -- add your sources / config options here
       sources = {
         -- lua
         require("null-ls").builtins.formatting.stylua,

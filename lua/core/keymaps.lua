@@ -44,7 +44,7 @@ map("v", "p", "P", { desc = "Paste Over Selection" })
 map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and Clear Hlsearch" })
 
 -- Save File
-map("n", "<leader>w", "<cmd>:w<cr>", { desc = "Save File" })
+map("n", "<leader>w", "<cmd>:w<cr><cmd>:wa<cr>", { desc = "Save File" })
 
 -- Switch buffers
 map("n", "<leader>[", "<cmd>:bp<cr>", { desc = "Buffer Previous" })
@@ -63,4 +63,3 @@ map("n", "<C-a>", "ggVG", { desc = "Save Session" })
 
 -- Remove help
 map("n", "<F1>", "<Nop>", { desc = "Remove help" })
-
