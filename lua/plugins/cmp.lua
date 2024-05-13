@@ -5,14 +5,17 @@ return {
     "hrsh7th/cmp-nvim-lsp",
     -- "hrsh7th/cmp-buffer",
     -- "hrsh7th/cmp-path",
-    "hrsh7th/cmp-nvim-lsp-signature-help",
     "L3MON4D3/LuaSnip",
     "saadparwaiz1/cmp_luasnip",
     "rafamadriz/friendly-snippets",
+    "onsails/lspkind-nvim",
   },
   config = function()
     local cmp = require("cmp")
     local luasnip = require("luasnip")
+
+    require("lspkind").init()
+    local lspkind = require("lspkind")
 
     -- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
     require("luasnip.loaders.from_vscode").lazy_load()
@@ -50,8 +53,14 @@ return {
         { name = "luasnip" },  -- snippets
         { name = "buffer" },   -- text within current buffer
         { name = "path" },     -- file system paths
-        { name = "nvim_lsp_signature_help" },
       }),
+      formatting = {
+        format = lspkind.cmp_format({
+          mode = "symbol_text",
+          maxwidth = 50,
+          ellipsis_char = "...",
+        }),
+      },
     })
   end,
 }

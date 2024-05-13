@@ -78,7 +78,7 @@ return {
         "angularls",
         "templ",
         "htmx",
-        "cssls"
+        "cssls",
       },
     })
 
