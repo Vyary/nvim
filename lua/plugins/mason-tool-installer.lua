@@ -31,6 +31,7 @@ return {
         "black",
         "isort",
         "pylint",
+        -- js/ts
         "prettier",
         "editorconfig-checker",
       },

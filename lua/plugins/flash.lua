@@ -4,7 +4,7 @@ return {
   opts = {},
   keys = {
     {
-      "s",
+      "f",
       mode = { "n", "x", "o" },
       function()
         require("flash").jump()
@@ -12,4 +12,13 @@ return {
       desc = "Flash",
     },
   },
+  config = function()
+    require("flash").setup({
+      modes = {
+        char = {
+          enabled = false,
+        },
+      },
+    })
+  end
 }
