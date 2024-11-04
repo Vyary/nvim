@@ -67,7 +67,7 @@ sudo snap install nvim --classic
 ```
 ## Rest of commands
 ```
-echo 'export PATH="/snap/bin:$PATH"' >> ~/.zshrc
+echo 'export PATH="$PATH:/snap/bin"' >> ~/.zshrc
 
 sudo apt install exa
 echo "alias ls='exa --icons -F'" >> .zshrc
