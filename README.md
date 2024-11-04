@@ -10,6 +10,7 @@ sudo apt install gzip
 sudo apt install make
 sudo apt install python3.10-venv -y
 sudo apt install npm
+sudo apt install zsh -y
 sudo snap install go --classic
 sudo snap install nvim --classic
 ```
