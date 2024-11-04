@@ -60,6 +60,7 @@ sudo apt install unzip
 sudo apt install gzip
 sudo apt install make
 sudo apt install gcc
+sudo apt install xclip
 sudo apt install python3.10-venv -y
 sudo apt install npm
 sudo snap install go --classic
