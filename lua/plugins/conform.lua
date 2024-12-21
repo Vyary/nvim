@@ -11,6 +11,7 @@ return {
 				typescript = { "prettierd", stop_after_first = true },
 				typescriptreact = { "prettierd", stop_after_first = true },
 				css = { "prettierd", stop_after_first = true },
+        python = {"black"}
 			},
 			format_on_save = {
 				-- These options will be passed to conform.format()
