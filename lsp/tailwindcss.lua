@@ -1,0 +1,59 @@
+local blink = require("blink.cmp")
+return {
+	cmd = { "tailwindcss-language-server", "--stdio" },
+	filetypes = {
+		"ejs",
+		"html",
+		"css",
+		"scss",
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact",
+	},
+	root_markers = {
+		"tailwind.config.js",
+		"tailwind.config.cjs",
+		"tailwind.config.mjs",
+		"tailwind.config.ts",
+		"postcss.config.js",
+		"postcss.config.cjs",
+		"postcss.config.mjs",
+		"postcss.config.ts",
+		"package.json",
+		"node_modules",
+	},
+	settings = {
+		tailwindCSS = {
+			classAttributes = { "class", "className", "class:list", "classList", "ngClass" },
+			includeLanguages = {
+				eelixir = "html-eex",
+				eruby = "erb",
+				htmlangular = "html",
+				templ = "html",
+			},
+			lint = {
+				cssConflict = "warning",
+				invalidApply = "error",
+				invalidConfigPath = "error",
+				invalidScreen = "error",
+				invalidTailwindDirective = "error",
+				invalidVariant = "error",
+				recommendedVariantOrder = "warning",
+			},
+			validate = true,
+		},
+	},
+	capabilities = vim.tbl_deep_extend(
+		"force",
+		{},
+		vim.lsp.protocol.make_client_capabilities(),
+		blink.get_lsp_capabilities(),
+		{
+			fileOperations = {
+				didRename = true,
+				willRename = true,
+			},
+		}
+	),
+}
