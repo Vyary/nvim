@@ -83,7 +83,7 @@ sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
 Add Nvim to your `PATH`:
 
 ```bash
-export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+echo 'export PATH="$PATH:/opt/nvim-linux-x86_64/bin"' >> ~/.zshrc
 source ~/.zshrc
 ```
 
