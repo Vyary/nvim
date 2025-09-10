@@ -54,8 +54,8 @@ Download and install Go manually:
 Run the following commands:
 
 ```bash
-wget https://go.dev/dl/go1.24.1.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go1.24.1.linux-amd64.tar.gz
+wget https://go.dev/dl/go1.25.1.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.25.1.linux-amd64.tar.gz
 ```
 
 Add Go to your `PATH`:
@@ -75,16 +75,15 @@ Download and install Neovim:
 Run the following commands:
 
 ```bash
-wget https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
-tar xzvf nvim-linux-x86_64.tar.gz
-./nvim-linux-x86_64/bin/nvim
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
+sudo rm -rf /opt/nvim
+sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
 ```
 
 Add Nvim to your `PATH`:
 
 ```bash
-echo 'export PATH="$HOME/nvim-linux-x86_64/bin:$PATH"' >> ~/.zshrc
-echo 'export PATH="$HOME/go/bin:$PATH"' >> ~/.zshrc
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 source ~/.zshrc
 ```
 
