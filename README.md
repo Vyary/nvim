@@ -86,6 +86,25 @@ echo 'alias npx="bunx"' >> ~/.zshrc
 source ~/.zshrc
 ```
 
+## 5.2 Install NVM
+
+Download and install NVM manually:
+
+- [NVM Installation Guide](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating)
+
+Run the following commands:
+
+```bash
+sudo apt-get purge nodejs
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+```
+
+Install a specific version:
+
+```bash
+nvm install 24.7.0
+```
+
 ## 6. Install Neovim
 
 Download and install Neovim:
