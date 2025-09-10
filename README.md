@@ -66,6 +66,26 @@ echo 'export PATH="$HOME/go/bin:$PATH"' >> ~/.zshrc
 source ~/.zshrc
 ```
 
+## 5.1 Install Bun
+
+Download and install Bun manually:
+
+- [Bun Installation Guide](https://bun.com/docs/installation)
+
+Run the following commands:
+
+```bash
+curl -fsSL https://bun.com/install | bash
+```
+
+Add Alias for Bun:
+
+```bash
+echo 'alias npm="bun"' >> ~/.zshrc
+echo 'alias npx="bunx"' >> ~/.zshrc
+source ~/.zshrc
+```
+
 ## 6. Install Neovim
 
 Download and install Neovim:
