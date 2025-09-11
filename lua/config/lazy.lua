@@ -19,7 +19,11 @@ require("lazy").setup({
 	spec = {
 		{ import = "plugins" },
 	},
-	install = { colorscheme = { "catppuccin" } },
+	-- defaults = { lazy = true },
+	install = {
+		missing = true,
+		colorscheme = { "catppuccin" },
+	},
 	checker = {
 		enabled = false,
 		notify = false,
@@ -27,10 +31,6 @@ require("lazy").setup({
 	change_detection = {
 		enabled = true,
 		notify = false,
-	},
-	ui = {
-		border = "rounded",
-		backdrop = 100,
 	},
 	performance = {
 		rtp = {

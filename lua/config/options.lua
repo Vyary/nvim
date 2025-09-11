@@ -13,6 +13,7 @@ o.undofile = true -- Save undo history
 o.undolevels = 1000
 o.confirm = true -- Confirm to save changes before exiting modified buffer
 o.autoread = true -- Auto-reload file changes from disk
+-- o.autowriteall = true -- Enable auto write
 o.lazyredraw = true -- Don't redraw while executing macros
 o.showmode = false -- Don't show mode since we have a statusline
 o.cmdheight = 0
@@ -42,7 +43,10 @@ o.fillchars = { eob = " ", fold = " " } -- Disable `~` on nonexistent lines
 o.expandtab = true -- Use spaces instead of tabs
 o.shiftwidth = 2 -- Size of an indent
 o.tabstop = 2 -- Number of spaces tabs count for
-o.smartindent = true -- Insert indents automatically
+-- o.softtabstop = 2
+-- o.autoindent = true
+-- o.smartindent = true -- Insert indents automatically
+-- o.cindent = true
 o.breakindent = true -- Enable break indent
 o.wrap = true -- Enable line wrapping
 o.linebreak = true -- Wrap lines at word boundaries
@@ -78,7 +82,6 @@ if vim.fn.has("nvim-0.10") == 1 then
 end
 
 -- Consider enabling these options
--- o.autowrite = true           -- Enable auto write
 -- o.conceallevel = 3           -- Hide * markup for bold and italic
 -- o.formatoptions = "jcroqlnt" -- tcqj
 -- o.grepformat = "%f:%l:%c:%m"

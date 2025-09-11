@@ -1,6 +1,6 @@
 return {
 	"saghen/blink.cmp",
-	dependencies = { "rafamadriz/friendly-snippets" },
+	event = "InsertEnter",
 	version = "1.*",
 	opts = {
 		enabled = function()
@@ -10,14 +10,39 @@ return {
 		end,
 
 		keymap = { preset = "enter" },
-		appearance = {
-			nerd_font_variant = "mono",
+
+		completion = {
+			documentation = {
+				auto_show = true,
+				auto_show_delay_ms = 100,
+				treesitter_highlighting = true,
+			},
+			list = {
+				selection = { preselect = true },
+			},
+			menu = {
+				draw = {
+					components = {
+						kind_icon = {
+							text = function(ctx)
+								return "" .. ctx.kind_icon .. ctx.icon_gap .. ""
+							end,
+						},
+					},
+				},
+			},
 		},
-		completion = { documentation = { auto_show = false } },
+
+		signature = {
+			enabled = true,
+		},
+
 		sources = {
 			default = { "lsp", "path", "snippets", "buffer" },
 		},
-		fuzzy = { implementation = "prefer_rust_with_warning" },
+
+		cmdline = {
+			enabled = false,
+		},
 	},
-	opts_extend = { "sources.default" },
 }
