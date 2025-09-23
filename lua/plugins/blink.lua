@@ -38,7 +38,7 @@ return {
 		},
 
 		sources = {
-			default = { "lsp", "path", "snippets", "buffer" },
+			default = { "lsp", "buffer", "path", "snippets" },
 		},
 
 		cmdline = {

@@ -60,3 +60,6 @@ map("n", "<F2>", vim.lsp.buf.rename, { desc = "LSP rename" })
 map("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "LSP code action" })
 map("n", "<leader>r", "<cmd>Telescope lsp_references<CR>", { desc = "LSP references" })
 map("n", "<leader>d", vim.diagnostic.open_float, { desc = "Show line diagnostics" })
+
+map("n", "<leader>t", ":split | terminal <CR>", { desc = "Open split window with terminal" })
+map("t", "<Esc>", "<C-\\><C-n>", { desc = "Esc in terminal" })
